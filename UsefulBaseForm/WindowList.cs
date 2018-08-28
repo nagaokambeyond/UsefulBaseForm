@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UsefulBaseForm
 {
-    internal partial class WindowList : Form
+    internal partial class WindowList : System.Windows.Forms.Form
     {
         private static WindowList _instance = new WindowList();
         public static WindowList Instance

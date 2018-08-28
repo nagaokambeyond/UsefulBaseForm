@@ -5,18 +5,18 @@ using System.Windows.Forms;
 
 namespace UsefulBaseForm
 {
-    internal sealed partial class ControlSearch : Form
+    internal sealed partial class ControlSearch : System.Windows.Forms.Form
     {
         private static ControlSearch _instance = new ControlSearch();
         public static ControlSearch Instance
         {
             get { return _instance; }
         }
-        private List<Tuple<Control, Color>> blink;
-        private List<Control> list;
+        private List<Tuple<Control, Color>> saveControls;
+        private List<Control> foundControls;
         private string word;
-        private Form _parentForm;
-        public new Form ParentForm
+        private System.Windows.Forms.Form _parentForm;
+        public new System.Windows.Forms.Form ParentForm
         {
             set
             {
@@ -31,8 +31,8 @@ namespace UsefulBaseForm
         public ControlSearch()
         {
             InitializeComponent();
-            list = new List<Control>();
-            blink = new List<Tuple<Control, Color>>();
+            foundControls = new List<Control>();
+            saveControls = new List<Tuple<Control, Color>>();
         }
 
         private void Clear()
@@ -44,12 +44,12 @@ namespace UsefulBaseForm
 
         private void Reset()
         {
-            list.Clear();
-            foreach(var ctl in blink)
+            foundControls.Clear();
+            foreach(var ctl in saveControls)
             {
                 ctl.Item1.BackColor = ctl.Item2; 
             }
-            blink.Clear();
+            saveControls.Clear();
         }
 
         private void AddList(Control.ControlCollection  controls)
@@ -64,9 +64,9 @@ namespace UsefulBaseForm
                 else if(ctl is TabControl)
                 {
                     var tab = ctl as TabControl;
-                    foreach(TabPage whi in tab.TabPages)
+                    foreach(TabPage page in tab.TabPages)
                     {
-                        AddList(whi.Controls);
+                        AddList(page.Controls);
                     }
                 }
                 else if(ctl is Panel)
@@ -77,16 +77,16 @@ namespace UsefulBaseForm
                 else if (ctl is DateTimePicker)
                 {
                     var dtp = ctl as DateTimePicker;
-                    if (dtp.Value.ToString().Contains(word)) list.Add(dtp);
+                    if (dtp.Value.ToString().Contains(word)) foundControls.Add(dtp);
                 }
                 else if (ctl is ListBox)
                 {
                     var lst = ctl as ListBox;
-                    if (lst.Items.ToString().ToLower().Contains(word.ToLower())) list.Add(lst);
+                    if (lst.Items.ToString().ToLower().Contains(word.ToLower())) foundControls.Add(lst);
                 }
                 else if ((ctl is TextBox) || (ctl is CheckBox) || (ctl is ComboBox))
                 {
-                    if (ctl.Text.ToLower().Contains(word.ToLower())) list.Add(ctl);
+                    if (ctl.Text.ToLower().Contains(word.ToLower())) foundControls.Add(ctl);
                 }
             }
         }
@@ -94,14 +94,14 @@ namespace UsefulBaseForm
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (word == textBox1.Text) return;
-            word = textBox1.Text;
             Reset();
+            word = textBox1.Text;
             if (string.IsNullOrEmpty(word)) return;
             AddList(_parentForm.Controls);
-            foreach(var ctl in list)
+            foreach(var ctl in foundControls)
             {
-                blink.Add(Tuple.Create<Control,Color>(ctl, ctl.BackColor));
-                ctl.BackColor = Color.Blue;
+                saveControls.Add(Tuple.Create<Control,Color>(ctl, ctl.BackColor));
+                ctl.BackColor = Config.Instance.FoundBackColor;
             }
         }
 

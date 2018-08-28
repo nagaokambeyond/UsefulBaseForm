@@ -38,6 +38,7 @@
             this.KeyPreview = true;
             this.Name = "UsefulBaseForm";
             this.Text = "UsefulBaseForm";
+            this.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.UsefulBaseForm_ControlAdded);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UsefulBaseForm_KeyDown);
             this.ResumeLayout(false);
 

@@ -1,9 +1,10 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using UsefulBaseConfig;
 
 namespace UsefulBaseForm
 {
-    public partial class UsefulBaseForm : Form
+    public abstract partial class UsefulBaseForm : Form
     {
         private Color ControlFocusBackColor { get; set; }
         private Color ControlBackColor { get; set; }

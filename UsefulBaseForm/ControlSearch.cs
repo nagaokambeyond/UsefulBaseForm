@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using UsefulBaseConfig;
 
 namespace UsefulBaseForm
 {
@@ -101,7 +102,7 @@ namespace UsefulBaseForm
             foreach(var ctl in foundControls)
             {
                 saveControls.Add(Tuple.Create<Control,Color>(ctl, ctl.BackColor));
-                ctl.BackColor = Config.Instance.FoundBackColor;
+                ctl.BackColor = Config.Instance.ThemeColor.FoundBackColor;
             }
         }
 

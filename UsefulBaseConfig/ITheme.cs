@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace UsefulBaseForm
+namespace UsefulBaseConfig
 {
     public interface ITheme
     {
@@ -8,5 +8,6 @@ namespace UsefulBaseForm
         Color ControlFocusBackColor { get; }
         Color ControlForeColor { get; }
         Color FormBackColor { get; }
+        Color FoundBackColor { get; }
     }
 }

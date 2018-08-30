@@ -1,8 +1,8 @@
 ﻿using System.Drawing;
 
-namespace UsefulBaseForm
+namespace UsefulBaseConfig.Theme
 {
-    public class RedTheme : ITheme
+    public sealed class RedTheme : ITheme
     {
         public Color ControlBackColor
         {
@@ -35,6 +35,15 @@ namespace UsefulBaseForm
                 return Color.DarkRed;
             }
         }
+
+        public Color FoundBackColor
+        {
+            get
+            {
+                return Color.Blue;
+            }
+        }
+
         public override string ToString()
         {
             return "Red";

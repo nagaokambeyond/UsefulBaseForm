@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Drawing;
 
-namespace UsefulBaseForm
+namespace UsefulBaseConfig.Theme
 {
     public sealed class NormalTheme : ITheme
     {
@@ -31,6 +30,14 @@ namespace UsefulBaseForm
             get
             {
                 return SystemColors.WindowText;
+            }
+        }
+
+        public Color FoundBackColor
+        {
+            get
+            {
+                return Color.Blue;
             }
         }
 

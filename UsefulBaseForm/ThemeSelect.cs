@@ -1,4 +1,5 @@
 ﻿using System;
+using UsefulBaseConfig;
 
 namespace UsefulBaseForm
 {

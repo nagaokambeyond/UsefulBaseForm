@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace UsefulBaseForm
+namespace SimpleMethods.UsefulBaseForm
 {
     internal partial class WindowList : System.Windows.Forms.Form
     {

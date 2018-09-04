@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using UsefulBaseConfig;
+using SimpleMethods.UsefulBaseConfig;
 
-namespace UsefulBaseForm
+namespace SimpleMethods.UsefulBaseForm
 {
     internal sealed partial class ControlSearch : System.Windows.Forms.Form
     {

@@ -7,7 +7,7 @@
     <ProjectGuid>{616037A2-A12D-4785-AB62-F1D4C6788DD5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UsefulBaseForm</RootNamespace>
+    <RootNamespace>SimpleMethods.UsefulBaseForm</RootNamespace>
     <AssemblyName>UsefulBaseForm</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

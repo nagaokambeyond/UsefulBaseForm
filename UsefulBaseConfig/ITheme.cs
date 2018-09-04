@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace UsefulBaseConfig
+namespace SimpleMethods.UsefulBaseConfig
 {
     public interface ITheme
     {

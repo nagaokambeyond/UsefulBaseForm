@@ -1,8 +1,8 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using UsefulBaseConfig;
+using SimpleMethods.UsefulBaseConfig;
 
-namespace UsefulBaseForm
+namespace SimpleMethods.UsefulBaseForm
 {
     public abstract partial class UsefulBaseForm : Form
     {

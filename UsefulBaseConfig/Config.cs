@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using UsefulBaseConfig.Theme;
+using SimpleMethods.UsefulBaseConfig.Theme;
 
-namespace UsefulBaseConfig
+namespace SimpleMethods.UsefulBaseConfig
 {
     public sealed class Config
     {

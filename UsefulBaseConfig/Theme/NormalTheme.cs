@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace UsefulBaseConfig.Theme
+namespace SimpleMethods.UsefulBaseConfig.Theme
 {
     public sealed class NormalTheme : ITheme
     {

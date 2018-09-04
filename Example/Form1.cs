@@ -1,6 +1,6 @@
 ﻿namespace Example
 {
-    public partial class Form1 : UsefulBaseForm.UsefulBaseForm
+    public partial class Form1 : SimpleMethods.UsefulBaseForm.UsefulBaseForm
     {
         public Form1()
         {

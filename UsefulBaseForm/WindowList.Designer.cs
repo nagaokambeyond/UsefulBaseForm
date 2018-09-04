@@ -1,4 +1,4 @@
-﻿namespace UsefulBaseForm
+﻿namespace SimpleMethods.UsefulBaseForm
 {
     partial class WindowList
     {

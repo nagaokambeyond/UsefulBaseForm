@@ -7,7 +7,7 @@
     <ProjectGuid>{1EADA06F-4D15-4905-B6B1-55E6D01D8316}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UsefulBaseConfig</RootNamespace>
+    <RootNamespace>SimpleMethods.UsefulBaseConfig</RootNamespace>
     <AssemblyName>UsefulBaseConfig</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

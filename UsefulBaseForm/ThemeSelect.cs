@@ -1,7 +1,7 @@
 ﻿using System;
-using UsefulBaseConfig;
+using SimpleMethods.UsefulBaseConfig;
 
-namespace UsefulBaseForm
+namespace SimpleMethods.UsefulBaseForm
 {
     internal sealed partial class ThemeSelect : System.Windows.Forms.Form
     {
